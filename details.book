@@ -1,0 +1,64 @@
+package details.book;
+public class details {
+    String author,bookname,publisher;
+    details(String a,String b,String p)
+    {
+        author=a;
+        bookname=b;
+        publisher=p;
+    }
+
+   
+}
+class bookdetails extends details
+{
+    int accno;
+    bookdetails(String a,String b,String p,int n)
+    {
+        super(a,b,p);
+        accno=n;
+    }
+
+    public void show()
+{
+   System.out.println("Book Details:");
+   System.out.println("name of the book: " +bookname);
+   System.out.println("Author: " + author);
+   System.out.println("Publisher: " + publisher);
+}
+}
+package details.journal;
+public class jdetails {
+    String name;
+    int id;
+    jdetails(String s,int i)
+    {
+        name=s;
+        id=i;
+    }
+    
+}
+ class jdetails extends jdetails
+{
+    jdetails(String s,int i)
+    {
+        super(s,i);
+    }
+public void show1()
+{
+   System.out.println("journal Details:");
+   System.out.println("journal name: " +name);
+   System.out.println("journal id: " +id);
+}
+}
+package details;
+
+import details.books.info;
+import details.journal.jinfo;
+public class NewClass1 {
+    public static void main(String[] args){
+    var ob1 = new info("Herbert Schildt" "Complete Reference", "ABC Publication");
+    jdetails ob2 = new jinfo("atlas", "234");
+    ob1.show();
+    ob2.NewClass1();  
+    }
